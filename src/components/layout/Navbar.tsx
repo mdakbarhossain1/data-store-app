@@ -73,7 +73,7 @@ const Navbar = () => {
                   onClick={() => setActiveMenu(item.name)}
                   className={`px-3 py-2 rounded-md text-sm md:text-base font-medium transition-colors ${
                     activeMenu === item.name
-                      ? "text-[#30FBEF]"
+                      ? "text-[#0D97FF]"
                       : "text-black dark:text-white"
                   }`}
                 >
