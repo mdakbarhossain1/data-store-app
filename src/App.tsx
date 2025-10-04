@@ -1,23 +1,40 @@
-import { useTheme } from "./hooks/useTheme";
-import ThemeToggle from "./components/common/ThemeToggle";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navbar from "./components/layout/Navbar";
+
+function Home() {
+  return <div className="p-8 text-center">Home Page</div>;
+}
+function About() {
+  return <div className="p-8 text-center">About Page</div>;
+}
+function Help() {
+  return <div className="p-8 text-center">Help Page</div>;
+}
+function Features() {
+  return <div className="p-8 text-center">Features Page</div>;
+}
+function SignUp() {
+  return <div className="p-8 text-center">Sign Up Page</div>;
+}
+function RequestDemo() {
+  return <div className="p-8 text-center">Request Demo Page</div>;
+}
 
 function App() {
-  const { theme } = useTheme();
-  console.log("Current theme:", theme); // debug
-
   return (
-     <div className="min-h-screen flex flex-col items-center justify-center bg-white dark:bg-gray-900 transition-colors">
-      <h1 className="text-3xl font-bold underline text-black dark:text-white mb-6">
-        Hello world!
-      </h1>
-      <ThemeToggle />
-      <div className="bg-white dark:bg-gray-800 text-black dark:text-white p-6 rounded-lg shadow-md mt-6 transition-colors">
-        <h2 className="text-xl font-bold">Dark Mode Example</h2>
-        <p className="text-gray-600 dark:text-gray-300 mt-2">
-          This card changes color based on theme.
-        </p>
+    <Router>
+      <div className="min-h-screen bg-background text-foreground">
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/help" element={<Help />} />
+          <Route path="/features" element={<Features />} />
+          <Route path="/signup" element={<SignUp />} />
+          <Route path="/demo" element={<RequestDemo />} />
+        </Routes>
       </div>
-    </div>
+    </Router>
   );
 }
 
