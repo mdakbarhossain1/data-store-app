@@ -1,73 +1,57 @@
-# React + TypeScript + Vite
+# SData Landing Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)  
+[![React Version](https://img.shields.io/badge/React-18.2.0-blue)](https://reactjs.org/)  
+[![Tailwind CSS](https://img.shields.io/badge/TailwindCSS-3.3.0-blue)](https://tailwindcss.com/)  
+[![Netlify](https://img.shields.io/badge/Deploy-Netlify-brightgreen)](https://www.netlify.com/)  
+[![Vercel](https://img.shields.io/badge/Deploy-Vercel-black)](https://vercel.com/)
 
-Currently, two official plugins are available:
+A modern, responsive landing page for **SData**, a secure and flexible online data storage platform. Built with **React**, **TypeScript**, **Tailwind CSS**, and **Framer Motion**.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🌐 Live Demo
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Check the live project here: [**SData Landing Page Demo**](https://data-store-app.vercel.app/)
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🚀 Features
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### Core Implementation
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- **Navigation Bar**
+  - Sticky header with logo and links (About, Help, Features, Sign Up)
+  - Collapsible mobile menu
+  - Active link highlight and dark/light mode toggle
+- **Hero Section**
+  - Responsive title, subtitle, and "Learn More" button
+  - Hero illustration (SVG/image)
+- **Features Section**
+  - Three feature cards (Search Data, Print Out, Security Code)
+  - Hover effects & carousel slider
+- **Download App Section**
+  - Phone mockup with sample app screen
+  - Download button
+- **Testimonials**
+  - Two testimonial cards with profile picture, name, role, and review
+  - Carousel navigation with dots and arrows
+- **Subscribe Section**
+  - Email input with validation
+  - “Join Us” button connected to fake backend (optional)
+- **Footer**
+  - Company info (address, contact)
+  - Navigation links and social icons with hover animations
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### Technical Requirements
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- Fully responsive design
+- Clean and reusable components
+- Dark/light mode support
+- Section animations with Framer Motion
+- Modern folder structure for maintainability
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## For Install
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- git clone https://github.com/mdakbarhossain1/data-store-app.git
+- cd data-store-app
